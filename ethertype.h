@@ -196,6 +196,9 @@
 #ifndef	ETHERTYPE_GEONET
 #define	ETHERTYPE_GEONET        0x8947  /* ETSI GeoNetworking (Official IEEE registration from Jan 2013) */
 #endif
+#ifndef ETHERTYPE_NSH
+#define ETHERTYPE_NSH           0x894f
+#endif
 #ifndef	ETHERTYPE_MEDSA
 #define	ETHERTYPE_MEDSA		0xdada	/* Marvel Distributed Switch Architecture */
 #endif

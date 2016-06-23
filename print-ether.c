@@ -83,6 +83,7 @@ const struct tok ethertype_values[] = {
     { ETHERTYPE_CALM_FAST,      "CALM FAST"},
     { ETHERTYPE_AOE,            "AoE" },
     { ETHERTYPE_MEDSA,          "MEDSA" },
+    { ETHERTYPE_NSH,            "NSH" },
     { 0, NULL}
 };
 
@@ -427,6 +428,10 @@ ethertype_print(netdissect_options *ndo,
 	case ETHERTYPE_MEDSA:
 		medsa_print(ndo, p, length, caplen);
 		return (1);
+
+        case ETHERTYPE_NSH:
+                nsh_print(ndo, p, length);
+                return (1);
 
 	case ETHERTYPE_LAT:
 	case ETHERTYPE_SCA:
